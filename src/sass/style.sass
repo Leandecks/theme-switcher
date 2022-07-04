@@ -1,1 +1,29 @@
 @import 'preset'
+
+@import 'default'
+@import 'dark'
+@import 'neon'
+
+$prime: var(--prime)
+$secondary: var(--secondary)
+$background: var(--background)
+
+body
+  background: $background  
+
+  button.switch
+    background: $prime
+    color: $secondary
+    padding: 1rem
+    border-radius: 1rem
+    font-size: 2rem
+    border: 0.2rem solid $prime
+    cursor: pointer
+    margin: 0 0 1rem 0
+    min-width: 15rem
+    font-family: $roboto
+    transition: all 300ms ease-in-out
+
+    &.switch:hover
+      background: $background
+      border: 0.2rem solid $secondary
